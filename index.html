@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Archery Backstop Build Guide</title>
+<meta name="description" content="Step-by-step guide to building a hanging rubber mat archery backstop for a 60cm target, with diagrams, shopping list and costs.">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JF54HQGVLT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JF54HQGVLT');
+</script>
+<style>
+:root{
+  --bg:#f7f5f0; --paper:#ffffff; --ink:#23211e; --muted:#6a655c; --line:#e3ddd1;
+  --accent:#b03a2e; --accent-soft:#f6e3de; --timber:#c99b62; --rubber:#2e3336;
+  --ok:#3f7d4e; --radius:10px; --maxw:880px;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#161514; --paper:#1f1e1c; --ink:#ece8e1; --muted:#a8a298; --line:#35322e;
+         --accent:#e0705f; --accent-soft:#3a2420; --ok:#7cc08d; }
+  figure img{ background:#fbfaf7; }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accent)}
+header.hero{background:var(--rubber);color:#f3efe8;padding:56px 20px 44px}
+header.hero .wrap{max-width:var(--maxw);margin:0 auto}
+header.hero h1{font-size:clamp(30px,5vw,46px);line-height:1.1;margin:0 0 12px;letter-spacing:-.5px}
+header.hero p{margin:0;max-width:640px;color:#d6d0c6;font-size:18px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:28px}
+.stat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:12px 14px}
+.stat b{display:block;font-size:22px;color:#fff}
+.stat span{font-size:14px;color:#c9c2b6}
+nav.toc{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
+nav.toc .wrap{max-width:var(--maxw);margin:0 auto;display:flex;gap:4px;overflow-x:auto;padding:8px 16px;scrollbar-width:thin}
+nav.toc a{white-space:nowrap;text-decoration:none;color:var(--muted);font-size:14px;padding:6px 10px;border-radius:6px}
+nav.toc a:hover,nav.toc a.active{background:var(--accent-soft);color:var(--accent)}
+.progress{height:3px;background:var(--line)}
+.progress div{height:3px;width:0;background:var(--ok);transition:width .3s}
+main{max-width:var(--maxw);margin:0 auto;padding:12px 16px 80px}
+section{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:24px 0;scroll-margin-top:64px}
+h2{font-size:26px;margin:0 0 10px;letter-spacing:-.3px}
+h3{font-size:18px;margin:26px 0 8px}
+.lead{font-size:18px;color:var(--ink)}
+.eyebrow{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:4px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:15px}
+.tscroll{overflow-x:auto}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:600}
+tr.total td{font-weight:700;border-top:2px solid var(--ink);border-bottom:none}
+td.num{white-space:nowrap}
+figure{margin:20px 0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fbfaf7}
+figure img{display:block;width:100%;height:auto}
+figcaption{font-size:14px;color:var(--muted);padding:10px 14px;background:var(--paper);border-top:1px solid var(--line)}
+ol.steps{list-style:none;padding:0;margin:10px 0;counter-reset:step var(--start,0)}
+ol.steps li{counter-increment:step;position:relative;padding:10px 12px 10px 58px;border-radius:8px;margin:4px 0;cursor:pointer;transition:background .15s}
+ol.steps li:hover{background:var(--bg)}
+ol.steps li::before{content:counter(step);position:absolute;left:12px;top:9px;width:30px;height:30px;border-radius:50%;background:var(--rubber);color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center}
+ol.steps li.done{color:var(--muted)}
+ol.steps li.done::before{content:"\2713";background:var(--ok)}
+.hint{font-size:14px;color:var(--muted)}
+.callout{background:var(--accent-soft);border-left:4px solid var(--accent);padding:12px 16px;border-radius:6px;margin:16px 0}
+.check{background:var(--bg);border:1px dashed var(--line);border-radius:8px;padding:12px 16px;margin:16px 0}
+ul.clean{padding-left:20px}
+dl.terms{display:grid;grid-template-columns:max-content 1fr;gap:6px 16px;margin:12px 0}
+dl.terms dt{font-weight:700}
+dl.terms dd{margin:0}
+@media (max-width:600px){
+  section{padding:18px 16px}
+  dl.terms{grid-template-columns:1fr}
+  dl.terms dd{margin-bottom:8px}
+}
+footer{max-width:var(--maxw);margin:0 auto;padding:0 16px 48px;font-size:14px;color:var(--muted)}
+.reset{font:inherit;font-size:14px;background:none;border:1px solid var(--line);color:var(--muted);border-radius:6px;padding:4px 10px;cursor:pointer}
+@media print{
+  nav.toc,.progress,.reset{display:none}
+  body{background:#fff;font-size:12pt}
+  header.hero{background:#fff;color:#000;padding:0}
+  header.hero p,.stat span{color:#333}
+  .stat{border-color:#ccc}.stat b{color:#000}
+  section{break-inside:auto;border:none;padding:0}
+  figure{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Archery Backstop Build Guide</h1>
+    <p>A hanging rubber mat backstop for a 60cm target, built from three horse stable mats and a simple timber frame. Written for someone who has never built anything like it.</p>
+    <div class="stats">
+      <div class="stat"><b>2.2m</b><span>tall to top of rail</span></div>
+      <div class="stat"><b>2.44m</b><span>wide of hanging mat</span></div>
+      <div class="stat"><b>3 mats</b><span>6ft x 4ft x 17mm</span></div>
+      <div class="stat"><b>&pound;435 to &pound;510</b><span>total materials</span></div>
+      <div class="stat"><b>2 days</b><span>work over 3 to 4 days</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Contents">
+  <div class="wrap">
+    <a href="#overview">Overview</a>
+    <a href="#before">Before you start</a>
+    <a href="#tools">Tools</a>
+    <a href="#shopping">Shopping list</a>
+    <a href="#cuts">Cut list</a>
+    <a href="#day1">Day 1: posts</a>
+    <a href="#day2">Day 2: frame</a>
+    <a href="#mats">Preparing mats</a>
+    <a href="#hanging">Hanging</a>
+    <a href="#testing">Testing</a>
+    <a href="#maintenance">Maintenance</a>
+  </div>
+  <div class="progress" aria-hidden="true"><div id="bar"></div></div>
+</nav>
+
+<main>
+
+<section id="overview">
+  <div class="eyebrow">Overview</div>
+  <h2>What you are building</h2>
+  <p class="lead">A 2.2m tall, 2.6m wide timber frame that hangs three horse stable mats behind a 60cm target. It takes about 2 days of work spread over 3 or 4 days, because the concrete needs time to set.</p>
+  <figure>
+    <img src="images/00-overview.svg" alt="Front view and side section of the finished backstop: two mats side by side, a half-mat strip behind the join, and a fixed low strip at ground level">
+    <figcaption>The finished backstop: front view and side section.</figcaption>
+  </figure>
+  <p><strong>How it works:</strong> two whole mats hang side by side from a front rail. A half-width strip hangs from a rear rail, 150mm behind the join between them. A fixed 30cm strip of mat on boards at ground level catches anything that goes under the hanging mats. Because the hanging mats swing, they soak up the arrow's energy instead of letting it punch through.</p>
+  <div class="tscroll"><table>
+    <thead><tr><th>Dimension</th><th>Size</th></tr></thead>
+    <tbody>
+      <tr><td>Height to top of rail</td><td>2.2m</td></tr>
+      <tr><td>Posts</td><td>125x125mm, 3.0m long, 0.8m in concrete</td></tr>
+      <tr><td>Post spacing</td><td>2.6m between centres (2.475m clear gap between them)</td></tr>
+      <tr><td>Hanging mats</td><td>top at about 2.0m, bottom 50 to 250mm above ground</td></tr>
+      <tr><td>Width of mat</td><td>2.44m</td></tr>
+      <tr><td>Low stop strip</td><td>ground to 0.3m</td></tr>
+      <tr><td>Target</td><td>60cm face on 80cm boss, centre 1.3m high, 0.75m in front of the mats</td></tr>
+    </tbody>
+  </table></div>
+  <h3>Words used in this guide</h3>
+  <dl class="terms">
+    <dt>Plumb</dt><dd>Perfectly upright, checked with a spirit level on two adjacent faces.</dd>
+    <dt>Rail</dt><dd>A horizontal timber bolted across the posts.</dd>
+    <dt>Clamp bar</dt><dd>Two thin battens bolted through the top edge of a mat so it can be hung without tearing.</dd>
+    <dt>Penny washer</dt><dd>A large, wide washer that spreads the load so a bolt cannot pull through rubber or timber.</dd>
+    <dt>Pilot hole</dt><dd>A small hole drilled first so a screw goes in straight and the wood does not split.</dd>
+  </dl>
+</section>
+
+<section id="before">
+  <div class="eyebrow">Planning</div>
+  <h2>Before you start</h2>
+  <p class="lead">Sort out four things before you buy anything: where it goes, what is underground, a helper, and the weather.</p>
+  <ol class="steps" data-group="before">
+    <li><strong>Choose the spot.</strong> Stand at your shooting position and look past the target. The area behind the backstop must be empty for well beyond a high miss: no paths, neighbours' gardens, sheds or roads in line. Keep the backstop at least 2m from any boundary to stay clearly within planning rules for garden structures (2.5m height limit near a boundary; this is 2.2m).</li>
+    <li><strong>Check for buried pipes and cables.</strong> Look for where gas, water and electricity enter the house and where any garden lights or outside sockets are fed from. Do not dig within 1m of a known run. If you are unsure, hire a cable detector (called a CAT, about &pound;30 a day from tool hire shops) and sweep both hole positions.</li>
+    <li><strong>Get a helper for day 1 and the mat hanging.</strong> Posts are awkward to hold plumb alone, and each mat weighs 35 to 40kg. Always lift mats with two people.</li>
+    <li><strong>Pick your weather.</strong> Concrete needs a dry spell above 5&deg;C with no frost forecast for 48 hours after pouring.</li>
+  </ol>
+  <div class="callout"><strong>Safety kit:</strong> work gloves, safety glasses for drilling and cutting, and sturdy boots. Wear gloves and avoid breathing the dust when handling Postcrete, as wet cement burns skin.</div>
+</section>
+
+<section id="tools">
+  <div class="eyebrow">Tools</div>
+  <h2>Tools needed</h2>
+  <p class="lead">Most of these are ordinary household tools; the post hole digger and long drill bit are the only specialist items.</p>
+  <div class="tscroll"><table>
+    <thead><tr><th>Tool</th><th>What it is for</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Spade + post hole digger</td><td>Digging the two post holes</td><td>Hire a digger for about &pound;15 a day, or buy one for about &pound;30</td></tr>
+      <tr><td>Digging bar (long steel bar)</td><td>Breaking up stones and hard ground in the holes</td><td>Hire or borrow</td></tr>
+      <tr><td>Tape measure (5m or longer)</td><td>All measuring</td><td></td></tr>
+      <tr><td>String line, 4 pegs, marker spray or sand</td><td>Marking out the hole positions</td><td></td></tr>
+      <tr><td>Spirit level, 1.2m if possible</td><td>Checking posts are upright and rails level</td><td>A strap-on post level (about &pound;8) makes day 1 much easier</td></tr>
+      <tr><td>Stepladder</td><td>Fitting the rails and hanging mats</td><td></td></tr>
+      <tr><td>Cordless drill</td><td>Drilling bolt holes and driving screws</td><td></td></tr>
+      <tr><td>13mm wood auger bit, 300mm long</td><td>Bolt holes through rail, post and rail (220mm total); rope holes in the clamp bars</td><td>About &pound;10</td></tr>
+      <tr><td>9mm and 6mm wood bits</td><td>M8 bolt holes; pilot holes for eye screws and coach screws</td><td></td></tr>
+      <tr><td>Handsaw or circular saw</td><td>Cutting battens to length</td><td>A circular saw will not cut a 125mm post in one pass: cut from two sides</td></tr>
+      <tr><td>Stanley knife + heavy-duty blades</td><td>Cutting the mats</td><td>Change blades often; blunt blades are the main cause of slips</td></tr>
+      <tr><td>Metal straightedge (or a straight length of timber)</td><td>Guiding the knife when cutting mats</td><td></td></tr>
+      <tr><td>Spanners or socket set: 13mm and 19mm</td><td>Tightening M8 and M12 nuts</td><td></td></tr>
+      <tr><td>Hammer</td><td>Tapping bolts through</td><td></td></tr>
+      <tr><td>Bucket or watering can</td><td>Water for the Postcrete</td><td></td></tr>
+      <tr><td>2 spare battens (about 2.4m) + screws</td><td>Temporary props to hold posts upright while concrete sets</td><td>Any scrap timber will do</td></tr>
+      <tr><td>Pencil and a square</td><td>Marking cuts</td><td></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="shopping">
+  <div class="eyebrow">Materials</div>
+  <h2>Shopping list and costs</h2>
+  <p class="lead">Everything comes to roughly &pound;435 to &pound;510, and the mats are the biggest single cost. Collecting the mats yourself from a farm or equestrian supplier avoids pallet delivery charges.</p>
+  <p>When buying timber that touches the ground, ask for <strong>UC4</strong> (Use Class 4) treated timber. It is treated for ground contact and will not rot in the concrete.</p>
+  <div class="tscroll"><table>
+    <thead><tr><th>Item</th><th>Qty</th><th>Used for</th><th>Approx. cost</th></tr></thead>
+    <tbody>
+      <tr><td>Rubber stable mats, 6ft x 4ft x 17mm (1.83 x 1.22m)</td><td>3</td><td>2 hang whole, 1 is cut into strips</td><td class="num">&pound;120 to &pound;150</td></tr>
+      <tr><td>Posts, 125x125mm x 3.0m, UC4 treated</td><td>2</td><td>Main uprights</td><td class="num">&pound;85 to &pound;100</td></tr>
+      <tr><td>Timber, 47x150mm x 3.0m, treated</td><td>2</td><td>Front and rear hanging rails</td><td class="num">&pound;30 to &pound;40</td></tr>
+      <tr><td>Timber, 47x150mm x 3.0m, UC4 treated</td><td>2</td><td>Low-stop boards at ground level</td><td class="num">&pound;30 to &pound;40</td></tr>
+      <tr><td>Board, 25x150mm x 3.0m, treated</td><td>1</td><td>Top cover over both rails</td><td class="num">&pound;10</td></tr>
+      <tr><td>Battens, 25x50mm x 2.4m, treated</td><td>3</td><td>Clamp bars for hanging the mats</td><td class="num">&pound;10 to &pound;15</td></tr>
+      <tr><td>M12 x 250mm bolts, nuts and 2 washers each, galvanised</td><td>4</td><td>Bolting rails through the posts</td><td class="num">&pound;15</td></tr>
+      <tr><td>M8 x 100mm coach screws with washers, galvanised</td><td>8</td><td>Fixing the low-stop boards to the posts</td><td class="num">&pound;10</td></tr>
+      <tr><td>Screw eyes, M8 or M10, about 100mm, galvanised</td><td>6</td><td>Hanging points under the rails</td><td class="num">&pound;15</td></tr>
+      <tr><td>Polyester rope, 8mm, plus galvanised snap hooks (60mm)</td><td>6m + 6 hooks</td><td>Hanging loops</td><td class="num">&pound;20</td></tr>
+      <tr><td>M8 x 80mm bolts, nylon-insert (nyloc) nuts, 2 penny washers each</td><td>15 sets</td><td>Clamp bars</td><td class="num">&pound;15</td></tr>
+      <tr><td>Exterior screws 5 x 50mm + M6 penny washers</td><td>20 of each</td><td>Fixing the low strip of mat</td><td class="num">&pound;8</td></tr>
+      <tr><td>Exterior screws 5 x 70mm</td><td>12</td><td>Top cover board and holding rails while drilling</td><td class="num">included above</td></tr>
+      <tr><td>Postcrete, 20kg bags</td><td>10</td><td>Setting the posts (about 4 per hole plus spares)</td><td class="num">&pound;60 to &pound;70</td></tr>
+      <tr><td>Gravel, 1 small bag</td><td>1</td><td>Drainage at the bottom of each hole, and under the low strip</td><td class="num">&pound;6</td></tr>
+      <tr class="total"><td>Total</td><td></td><td></td><td class="num">about &pound;435 to &pound;510</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="cuts">
+  <div class="eyebrow">Preparation</div>
+  <h2>Cut list</h2>
+  <p class="lead">Most of the timber is used at its full 3.0m length, so there are only a handful of cuts. Measure twice and mark with a square before every cut.</p>
+  <h3>Timber</h3>
+  <div class="tscroll"><table>
+    <thead><tr><th>Piece</th><th>From</th><th>Cut to</th><th>Qty</th></tr></thead>
+    <tbody>
+      <tr><td>Posts</td><td>125x125mm x 3.0m</td><td>No cut</td><td>2</td></tr>
+      <tr><td>Hanging rails</td><td>47x150mm x 3.0m</td><td>No cut (they overhang the posts by about 140mm each side)</td><td>2</td></tr>
+      <tr><td>Low-stop boards</td><td>47x150mm x 3.0m UC4</td><td>No cut</td><td>2</td></tr>
+      <tr><td>Top cover</td><td>25x150mm x 3.0m</td><td>No cut</td><td>1</td></tr>
+      <tr><td>Clamp bars for whole mats</td><td>2 of the 25x50mm x 2.4m battens</td><td>1.18m (two from each batten)</td><td>4</td></tr>
+      <tr><td>Clamp bars for rear strip</td><td>3rd 25x50mm batten</td><td>0.60m</td><td>2</td></tr>
+    </tbody>
+  </table></div>
+  <h3>Mats <span class="hint">(label each piece with chalk as you cut it)</span></h3>
+  <div class="tscroll"><table>
+    <thead><tr><th>Piece</th><th>From</th><th>Size</th><th>Used for</th></tr></thead>
+    <tbody>
+      <tr><td>Mat A</td><td>Whole mat</td><td>1.83 x 1.22m</td><td>Front left</td></tr>
+      <tr><td>Mat B</td><td>Whole mat</td><td>1.83 x 1.22m</td><td>Front right</td></tr>
+      <tr><td>Strip C1</td><td>Mat C, cut in half lengthways, then 0.23m cut off one end</td><td>1.60 x 0.61m</td><td>Rear strip behind the join</td></tr>
+      <tr><td>Strips C2</td><td>Other half of mat C, cut in half lengthways</td><td>Two pieces 1.83 x 0.305m</td><td>Low stop, laid end to end and trimmed to 2.475m total</td></tr>
+      <tr><td>Offcuts</td><td>What is left</td><td>About 1.18 x 0.30m and 0.23 x 0.61m</td><td>Spare patches</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="day1">
+  <div class="eyebrow">Day 1</div>
+  <h2>Set out, dig and set the posts</h2>
+  <p class="lead">Getting the two posts upright, level with each other and the right distance apart is the most important job in the whole build; everything else bolts onto them. Allow a full day with a helper.</p>
+
+  <h3>Mark out</h3>
+  <ol class="steps" data-group="day1a" style="--start:0">
+    <li>Decide where the target will stand. The backstop line runs across the shooting direction, 0.75m behind the target.</li>
+    <li>Knock in two pegs about 3.5m apart on the backstop line and tie a string tightly between them, about 50mm off the ground. This string marks the <strong>front face</strong> of both posts.</li>
+    <li>Find the spot on the string directly behind the target centre. Measure 1.3m each way along the string and mark both points. These are the post centres, 2.6m apart.</li>
+    <li>Check the string is square to the shooting direction: from the centre point, measure 1.2m along the string, and 1.6m straight back towards the shooting line. The diagonal between those two points should be exactly 2.0m. If not, swing the string until it is.</li>
+  </ol>
+  <figure>
+    <img src="images/01-mark-out.svg" alt="Plan view of marking out: string line, post centres 1.3m either side of centre, and the 1.2m, 1.6m, 2.0m square check" loading="lazy">
+    <figcaption>Steps 1 to 4: string line, post centres and the square check.</figcaption>
+  </figure>
+
+  <h3>Dig the holes</h3>
+  <ol class="steps" data-group="day1b" style="--start:4">
+    <li>At each post mark, dig a hole about 300mm across and 900mm deep. The front edge of the hole should be about 90mm in front of the string, so the post can sit centred with its front face on the string. Use the post hole digger to keep the sides straight, and the digging bar to break up stones.</li>
+    <li>Put about 100mm of gravel in the bottom of each hole and press it down firmly with the end of a post. This lets water drain away from the post end.</li>
+  </ol>
+
+  <h3>Set the posts</h3>
+  <ol class="steps" data-group="day1c" style="--start:6">
+    <li>Stand the first post in its hole. Measure from ground level to the top: it should be 2.2m. Add or remove gravel until it is.</li>
+    <li>Turn the post so its front face sits against the string line and its sides are square to it.</li>
+    <li>Hold a spirit level against the front face, then a side face. Adjust until both show upright. Screw two temporary props (scrap battens) from two adjacent faces of the post down to pegs in the ground, so it stays upright on its own.</li>
+    <li>Stand the second post the same way. Lay a straight rail across both tops with the spirit level on it; add or remove gravel under the second post until the tops are level. Check the distance between the posts at both the top and the bottom: 2.475m between inner faces.</li>
+    <li>Pour water into the first hole until it is about one-third full, then pour in Postcrete until it is about 50mm below the ground. That is roughly 4 bags. Follow the instructions on the bag if they differ.</li>
+    <li>You have about 5 minutes before it starts setting. Recheck the level on both faces straight away and nudge the post if needed.</li>
+    <li>Repeat for the second post, then recheck the spacing and that the tops are level.</li>
+    <li>Leave the props in place. Postcrete sets in minutes, but leave it <strong>at least 24 hours</strong> before bolting anything on and <strong>48 hours</strong> before hanging the mats. Fill the last 50mm of each hole with soil later.</li>
+  </ol>
+  <figure>
+    <img src="images/02-set-posts.svg" alt="Section through a post: 900mm hole with 100mm gravel, Postcrete to 50mm below ground, temporary prop and spirit level on two faces" loading="lazy">
+    <figcaption>Steps 5 to 14: hole, gravel, Postcrete, prop and level.</figcaption>
+  </figure>
+  <div class="check"><strong>Check before you finish for the day:</strong> both posts upright on two faces, tops level, 2.475m between inner faces, both front faces on the string line.</div>
+</section>
+
+<section id="day2">
+  <div class="eyebrow">Day 2</div>
+  <h2>Rails, top cover, low-stop boards and hanging points</h2>
+  <p class="lead">Once the concrete has had 24 hours, the rest of the frame goes on in about half a day. You can remove the temporary props once both rails are bolted on.</p>
+
+  <h3>Hanging rails</h3>
+  <ol class="steps" data-group="day2a" style="--start:0">
+    <li>Mark the centre of each 3.0m rail (1.5m from either end).</li>
+    <li>Hold the first rail against the <strong>front</strong> faces of the posts, top edge flush with the post tops, centre mark in the middle between the posts. It should overhang each post by about 140mm. Drive one 70mm screw through the rail into each post to hold it while you drill.</li>
+    <li>Do the same with the second rail on the <strong>back</strong> faces of the posts.</li>
+    <li>At each post, mark two bolt holes on the front rail, both centred across the post: one 45mm down from the top, one 105mm down.</li>
+    <li>Drill each hole with the 13mm auger, straight through front rail, post and back rail (220mm). Have your helper stand to the side and tell you if the drill is tilting. Go slowly and pull the bit out every 50mm to clear the chips.</li>
+    <li>Push an M12 bolt through each hole with a washer under the head, tapping it with a hammer if tight. Fit a washer and nut on the back and tighten with a 19mm spanner until the washers just start to bite into the wood.</li>
+    <li>Put the spirit level on top of the front rail to confirm it is level. Remove the temporary props.</li>
+  </ol>
+  <figure>
+    <img src="images/03-rails.svg" alt="Rails bolted through the post with M12 bolts, bolt holes 45mm and 105mm down" loading="lazy">
+    <figcaption>Steps 1 to 7: rails bolted through the posts.</figcaption>
+  </figure>
+
+  <h3>Top cover</h3>
+  <ol class="steps" data-group="day2b" style="--start:7">
+    <li>Lay the 25x150mm board flat across the tops, its front edge flush with the front face of the front rail. Screw it down with two 70mm screws into the front rail at each end, and two into each post top. It sheds rain off the rail tops and post ends.</li>
+  </ol>
+
+  <h3>Low-stop boards</h3>
+  <ol class="steps" data-group="day2c" style="--start:8">
+    <li>Along the back faces of the posts, dig a shallow trench 50mm deep and 150mm wide, and fill it with gravel so the boards will sit on gravel, not wet soil.</li>
+    <li>Stand the first UC4 47x150mm board on edge on the gravel, against the back faces of the posts, centred like the rails. Stand the second on top of it; the top edge should be about 300mm above ground.</li>
+    <li>At each post, drill two 9mm holes through each board (so 4 per post), then a 6mm pilot hole 60mm deeper into the post. Drive in the M8 x 100mm coach screws with a washer using the 13mm spanner.</li>
+  </ol>
+
+  <h3>Hanging points (eye screws)</h3>
+  <p>Measure all positions from the centre mark on each rail. Fit the eye screws into the <strong>underside</strong> of the rail, along its middle.</p>
+  <div class="tscroll"><table>
+    <thead><tr><th>Rail</th><th>Eye screw positions from centre</th><th>For</th></tr></thead>
+    <tbody>
+      <tr><td>Front</td><td>1.07m and 0.15m to the left</td><td>Mat A</td></tr>
+      <tr><td>Front</td><td>0.15m and 1.07m to the right</td><td>Mat B</td></tr>
+      <tr><td>Rear</td><td>0.20m left and 0.20m right</td><td>Strip C1</td></tr>
+    </tbody>
+  </table></div>
+  <ol class="steps" data-group="day2d" style="--start:11">
+    <li>Drill a 6mm pilot hole 70mm deep at each mark, pointing straight up.</li>
+    <li>Wind in each eye screw by hand, then use a screwdriver pushed through the eye as a lever to screw it fully home. The eye should end up facing across the frame (left to right), so the rope loops hang straight.</li>
+  </ol>
+  <figure>
+    <img src="images/04-frame-front.svg" alt="Front view of the frame: top cover, low-stop boards and strip, and eye screw positions from the centre mark" loading="lazy">
+    <figcaption>Steps 8 to 13: top cover, low-stop boards and eye screw positions.</figcaption>
+  </figure>
+</section>
+
+<section id="mats">
+  <div class="eyebrow">Mats</div>
+  <h2>Preparing the mats</h2>
+  <p class="lead">Cutting one mat and fitting clamp bars to three pieces takes 2 to 3 hours. Work on a flat patch of ground or a sheet of old plywood.</p>
+
+  <h3>Cutting rubber safely</h3>
+  <ul class="clean">
+    <li>Cut from the smoother top face, with a scrap board underneath.</li>
+    <li>Kneel on the straightedge to hold it, and always cut away from yourself with your other hand behind the blade.</li>
+    <li>Do not try to cut through in one go. Make 4 to 6 firm passes along the same line.</li>
+    <li>After the first two passes, fold the mat back along the cut. The cut opens up and the blade goes through far more easily.</li>
+    <li>Dip the blade in soapy water if it drags, and change it as soon as it feels blunt.</li>
+  </ul>
+
+  <h3>Cuts (all on mat C)</h3>
+  <ol class="steps" data-group="mats-a" style="--start:0">
+    <li>Chalk a line down the middle of mat C lengthways, 610mm from one long edge. Cut along it to make two 1.83 x 0.61m halves.</li>
+    <li>Take one half. Chalk a line across it 230mm from one end and cut it off. This is <strong>strip C1</strong> (1.60 x 0.61m), the rear strip.</li>
+    <li>Take the other half. Cut it in half lengthways, 305mm from an edge. These two pieces are <strong>strips C2</strong>, for the low stop. Leave them long for now; you will trim them on site.</li>
+  </ol>
+  <figure>
+    <img src="images/05-cut-mat-c.svg" alt="Cutting plan for mat C: cut 1 lengthways, cut 2 across to make strip C1, cut 3 to make the two C2 strips" loading="lazy">
+    <figcaption>Steps 1 to 3: cutting plan for mat C.</figcaption>
+  </figure>
+
+  <h3>Fitting the clamp bars</h3>
+  <p>Each hanging piece gets a batten on the front and one on the back of its top edge, bolted through. The bolts hold the battens on; separate rope holes take the weight.</p>
+  <div class="tscroll"><table>
+    <thead><tr><th>Piece</th><th>Battens</th><th>Bolt holes (9mm), along the batten</th><th>Rope holes (13mm), along the batten</th></tr></thead>
+    <tbody>
+      <tr><td>Mat A and mat B</td><td>2 x 1.18m each</td><td>60, 350, 590, 830, 1120mm</td><td>130 and 1050mm</td></tr>
+      <tr><td>Strip C1</td><td>2 x 0.60m</td><td>40, 300, 560mm</td><td>100 and 500mm</td></tr>
+    </tbody>
+  </table></div>
+  <ol class="steps" data-group="mats-b" style="--start:3">
+    <li>Lay the mat flat. Place one batten along the top short edge, flush with the edge and centred, so it stops about 20mm short of each side.</li>
+    <li>Mark all the holes on the batten, 25mm down from its top edge (the middle of the batten).</li>
+    <li>Put the second batten directly underneath, on the back of the mat, lined up exactly. Hold the sandwich together with two screws through the ends, or with clamps.</li>
+    <li>Drill all the holes straight through batten, mat and batten: 9mm for bolts, 13mm (the auger) for rope. Drill rubber slowly with light pressure; fast drilling makes it grab and wrap.</li>
+    <li>Fit the M8 bolts: penny washer under the head, through the sandwich, penny washer, nyloc nut. Tighten until the rubber just starts to squash, no more.</li>
+    <li>Repeat for the other whole mat and for strip C1.</li>
+  </ol>
+  <figure>
+    <img src="images/06-clamp-bars.svg" alt="Clamp bar hole positions for the whole mats and strip C1, with a cross-section of the batten, mat, bolt, rope loop and snap hook" loading="lazy">
+    <figcaption>Steps 4 to 9: clamp bar hole positions and cross-section.</figcaption>
+  </figure>
+</section>
+
+<section id="hanging">
+  <div class="eyebrow">Hanging</div>
+  <h2>Hanging the mats and fitting the low strip</h2>
+  <p class="lead">Fit the pieces in this order: low strip, rear strip, then the two front mats. Each one is easier to reach before the next goes up. Wait until the concrete has had 48 hours.</p>
+  <figure>
+    <img src="images/07-hang.svg" alt="Side section showing the fitting order: 1 low strip, 2 rear strip, 3 front mats, with clearances" loading="lazy">
+    <figcaption>Fitting order and clearances.</figcaption>
+  </figure>
+
+  <h3>Low strip</h3>
+  <ol class="steps" data-group="hang-a" style="--start:0">
+    <li>Stand the two C2 strips on their long edges, end to end, between the posts against the front face of the low-stop boards, bottom edges on the gravel.</li>
+    <li>Measure the gap between the posts (about 2.475m). Leave the first strip at its full 1.83m and trim the second to fill the rest, so the two butt tightly together.</li>
+    <li>Screw them to the boards with 5 x 50mm screws and M6 penny washers, in two rows (75mm and 225mm up from the ground), a screw every 250mm along each row.</li>
+  </ol>
+
+  <h3>Rope loops</h3>
+  <ol class="steps" data-group="hang-b" style="--start:3">
+    <li>Cut six 400mm lengths of rope. Melt each end briefly with a lighter so it will not fray.</li>
+    <li>Thread one length through each rope hole in the clamp bars and tie its ends together with a double fisherman's knot, making a loop about 100mm long. It is an easy knot and will not slip; a 30-second video search shows how.</li>
+    <li>Clip a snap hook onto each loop.</li>
+  </ol>
+
+  <h3>Rear strip (C1)</h3>
+  <ol class="steps" data-group="hang-c" style="--start:6">
+    <li>From behind the frame, lift strip C1 so its clamp bar sits under the two rear-rail eye screws, and clip both snap hooks on. Two people make this easy: one lifts, one clips.</li>
+    <li>Check the bottom edge is at least 30mm clear of the top of the low-stop boards so it can swing. If not, shorten the loops by retying.</li>
+  </ol>
+
+  <h3>Front mats (A and B)</h3>
+  <ol class="steps" data-group="hang-d" style="--start:8">
+    <li>With a helper on a stepladder, lift mat A (left) by its clamp bar, one person at each end. Clip the snap hooks onto the two left eye screws on the front rail.</li>
+    <li>Hang mat B on the right-hand pair the same way. The two mats should meet edge to edge at the centre, directly in front of strip C1.</li>
+    <li>Check the bottom edges are level with each other and between 50mm and 250mm above the ground, so they swing freely but still hang in front of the low strip. Retie loops to adjust.</li>
+    <li>Push each mat gently backwards. It should swing freely and settle back without catching on the posts.</li>
+  </ol>
+</section>
+
+<section id="testing">
+  <div class="eyebrow">First use</div>
+  <h2>Testing and first use</h2>
+  <p class="lead">Test at short range with no target first, so you can see exactly how the mats behave. Make sure nobody is behind the backstop.</p>
+  <ol class="steps" data-group="test" style="--start:0">
+    <li>Shoot 6 arrows into the mats from 5m with a lighter bow, aiming at different areas including near the edges and the centre join.</li>
+    <li>Walk round the back. Check that no arrow has come through, and look at how far the points poke out of the back of the mats.</li>
+    <li>Repeat at 10m with your heaviest bow.</li>
+    <li>If points are showing more than 20mm out of the back of the front mats anywhere, hang one of the spare offcuts behind that spot.</li>
+    <li>Set the boss up at 1.3m centre height, 0.75m in front of the mats, and start shooting at your normal distance.</li>
+  </ol>
+  <div class="callout"><strong>Pulling arrows out of rubber:</strong> twist slightly as you pull, and pull straight back along the arrow's line. Rubbing a little soap or silicone spray on your points makes this much easier. Never pull from behind the mat.</div>
+</section>
+
+<section id="maintenance">
+  <div class="eyebrow">Upkeep</div>
+  <h2>Maintenance and rotating the mats</h2>
+  <p class="lead">The mats around the target will wear first; because they hang from snap hooks, you can swap them round in minutes instead of replacing them.</p>
+  <div class="tscroll"><table>
+    <thead><tr><th>When</th><th>What to do</th></tr></thead>
+    <tbody>
+      <tr><td>Every session</td><td>Look at the back of the mats for points poking through</td></tr>
+      <tr><td>Monthly</td><td>Check rope loops for fraying and snap hooks for rust; retie or replace</td></tr>
+      <tr><td>Every few months</td><td>Swap mats A and B left to right, so the most worn area moves away from the target</td></tr>
+      <tr><td>When strip C1 wears through</td><td>Replace it with a fresh strip cut from a new mat (one mat gives two strips)</td></tr>
+      <tr><td>Once a year</td><td>Tighten the M12 bolts and coach screws; check the posts are still upright</td></tr>
+    </tbody>
+  </table></div>
+  <p>When a front mat has a worn patch you cannot rotate away, hang a spare offcut behind it from two extra eye screws on the rear rail. A replacement mat costs about &pound;40 to &pound;50.</p>
+</section>
+
+</main>
+
+<footer>
+  <p>Tap any numbered step to tick it off; your progress is saved in this browser. <button class="reset" id="reset" type="button">Clear ticks</button></p>
+  <p>Planning rules and prices are a general guide for England in 2026. Check with your local council if you are unsure, and always make sure the area behind the backstop is clear before shooting.</p>
+</footer>
+
+<script>
+(function(){
+  var KEY = 'backstop-steps-v1';
+  var state = {};
+  try { state = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { state = {}; }
+  var items = [];
+  document.querySelectorAll('ol.steps').forEach(function(ol){
+    var g = ol.getAttribute('data-group');
+    ol.querySelectorAll('li').forEach(function(li, i){
+      var id = g + '-' + i;
+      li.setAttribute('role', 'checkbox');
+      li.setAttribute('tabindex', '0');
+      items.push({li: li, id: id});
+      function set(v){ li.classList.toggle('done', v); li.setAttribute('aria-checked', v ? 'true' : 'false'); }
+      set(!!state[id]);
+      function toggle(){ state[id] = !state[id]; set(state[id]); save(); }
+      li.addEventListener('click', function(e){ if (e.target.tagName !== 'A') toggle(); });
+      li.addEventListener('keydown', function(e){ if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); toggle(); } });
+    });
+  });
+  var bar = document.getElementById('bar');
+  function progress(){
+    var done = items.filter(function(x){ return state[x.id]; }).length;
+    bar.style.width = (items.length ? done / items.length * 100 : 0) + '%';
+  }
+  function save(){ try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} progress(); }
+  document.getElementById('reset').addEventListener('click', function(){
+    state = {}; items.forEach(function(x){ x.li.classList.remove('done'); x.li.setAttribute('aria-checked','false'); }); save();
+  });
+  progress();
+  // highlight current section in nav
+  var links = Array.prototype.slice.call(document.querySelectorAll('nav.toc a'));
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) {
+          links.forEach(function(a){
+            var on = a.getAttribute('href') === '#' + en.target.id;
+            a.classList.toggle('active', on);
+            if (on && a.scrollIntoView) { a.parentNode.scrollLeft = a.offsetLeft - 16; }
+          });
+        }
+      });
+    }, {rootMargin: '-30% 0px -65% 0px'});
+    document.querySelectorAll('main section').forEach(function(s){ obs.observe(s); });
+  }
+})();
+</script>
+</body>
+</html>

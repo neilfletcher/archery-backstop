@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#222">
+<defs>
+<marker id="d" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto"><path d="M1,5 L9,5 M5,1 L5,9" stroke="#555" stroke-width="1.2"/></marker>
+<marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#b03a2e"/></marker>
+<marker id="g" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#666"/></marker>
+<pattern id="gr" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#d8cfbd"/><circle cx="3" cy="3" r="1.6" fill="#a89c84"/><circle cx="8" cy="7" r="1.3" fill="#a89c84"/></pattern>
+<pattern id="hz" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#fdf1ec"/><line x1="0" y1="0" x2="0" y2="12" stroke="#e7b3a4" stroke-width="3"/></pattern>
+</defs>
+<rect width="900" height="700" fill="#fbfaf7"/>
+<text x="24" y="36" font-size="20" font-weight="bold">Day 2, steps 8 to 13: top cover, low-stop boards and eye screws</text>
+<text x="24" y="58" text-anchor="start" font-size="13" fill="#666">Front view of the frame before the mats go on. Scale approx. 1m = 200px.</text>
+<rect x="60" y="560" width="780" height="50" fill="#e8dcc6"/>
+<line x1="60" y1="560" x2="840" y2="560" stroke="#6b5a3c" stroke-width="2"/>
+<rect x="150" y="500" width="600" height="60" fill="#d9b88a" stroke="#6e4f2c" stroke-dasharray="6 4"/>
+<line x1="150" y1="530" x2="750" y2="530" stroke="#6e4f2c" stroke-dasharray="6 4"/>
+<rect x="202.5" y="500" width="495" height="60" fill="#2e3336" stroke="#15181a" opacity="0.85"/>
+<rect x="202.5" y="562" width="495" height="10" fill="url(#gr)"/>
+<rect x="177.5" y="119.99999999999994" width="25" height="440.00000000000006" fill="#c99b62" stroke="#6e4f2c" stroke-width="1.5"/>
+<rect x="697.5" y="119.99999999999994" width="25" height="440.00000000000006" fill="#c99b62" stroke="#6e4f2c" stroke-width="1.5"/>
+<rect x="150" y="114.99999999999994" width="600" height="5" fill="#8a6a42"/>
+<rect x="150" y="119.99999999999994" width="600" height="30" fill="#c99b62" stroke="#6e4f2c" stroke-width="1.5"/>
+<rect x="206" y="161.99999999999994" width="244" height="366" fill="none" stroke="#999" stroke-dasharray="4 5"/>
+<rect x="450" y="161.99999999999994" width="244" height="366" fill="none" stroke="#999" stroke-dasharray="4 5"/>
+<text x="328" y="349.99999999999994" text-anchor="middle" font-size="13" fill="#888">mat A goes here</text>
+<text x="572" y="349.99999999999994" text-anchor="middle" font-size="13" fill="#888">mat B goes here</text>
+<line x1="450" y1="89.99999999999994" x2="450" y2="590" stroke="#b03a2e" stroke-dasharray="5 4"/>
+<text x="450" y="83.99999999999994" text-anchor="middle" font-size="13" fill="#b03a2e">centre mark</text>
+<circle cx="236.0" cy="155.99999999999994" r="5" fill="none" stroke="#333" stroke-width="2.5"/>
+<circle cx="420.0" cy="155.99999999999994" r="5" fill="none" stroke="#333" stroke-width="2.5"/>
+<circle cx="480.0" cy="155.99999999999994" r="5" fill="none" stroke="#333" stroke-width="2.5"/>
+<circle cx="664.0" cy="155.99999999999994" r="5" fill="none" stroke="#333" stroke-width="2.5"/>
+<circle cx="410.0" cy="155.99999999999994" r="5" fill="none" stroke="#e0a030" stroke-width="2.5"/>
+<circle cx="490.0" cy="155.99999999999994" r="5" fill="none" stroke="#e0a030" stroke-width="2.5"/>
+<line x1="236.0" y1="194.99999999999994" x2="450" y2="194.99999999999994" stroke="#555" stroke-width="1.2" marker-start="url(#d)" marker-end="url(#d)"/><text x="343" y="188.99999999999994" text-anchor="middle" font-size="13" fill="#333">1.07m</text>
+<line x1="450" y1="216.99999999999994" x2="480.0" y2="216.99999999999994" stroke="#555" stroke-width="1.2" marker-start="url(#d)" marker-end="url(#d)"/><text x="484" y="221.99999999999994" text-anchor="start" font-size="13" fill="#333">0.15m</text>
+<line x1="410.0" y1="244.99999999999994" x2="450" y2="244.99999999999994" stroke="#555" stroke-width="1.2" marker-start="url(#d)" marker-end="url(#d)"/><text x="406" y="249.99999999999994" text-anchor="end" font-size="13" fill="#a06c10">0.20m</text>
+<text x="750" y="111.99999999999994" text-anchor="start" font-size="13" fill="#333">top cover board</text>
+<text x="758" y="141.99999999999994" text-anchor="start" font-size="13" fill="#333">front rail (rear rail</text>
+<text x="758" y="157.99999999999994" text-anchor="start" font-size="13" fill="#333">directly behind it)</text>
+<text x="760" y="524" text-anchor="start" font-size="13" fill="#333">low strip of mat</text>
+<text x="760" y="540" text-anchor="start" font-size="13" fill="#333">on boards behind posts</text>
+<line x1="120" y1="500" x2="120" y2="560" stroke="#555" stroke-width="1.2" marker-start="url(#d)" marker-end="url(#d)"/><text x="112" y="536" text-anchor="end" font-size="13" fill="#333">0.3m</text>
+<line x1="202.5" y1="588" x2="697.5" y2="588" stroke="#555" stroke-width="1.2" marker-start="url(#d)" marker-end="url(#d)"/>
+<text x="450" y="606" text-anchor="middle" font-size="13" fill="#333">2.475m between posts</text>
+<circle cx="40" cy="650" r="5" fill="none" stroke="#333" stroke-width="2.5"/><text x="52" y="655" text-anchor="start" font-size="13" fill="#333">eye screw under FRONT rail (4): 0.15m and 1.07m each side of centre</text>
+<circle cx="40" cy="674" r="5" fill="none" stroke="#e0a030" stroke-width="2.5"/><text x="52" y="679" text-anchor="start" font-size="13" fill="#333">eye screw under REAR rail (2): 0.20m each side of centre</text>
+</svg>
