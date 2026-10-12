@@ -13,6 +13,16 @@
   gtag('js', new Date());
   gtag('config', 'G-JF54HQGVLT');
 </script>
+<script>
+  // Usage events for the admin dashboard: what was done here, never who did it.
+  window.ssTrack = function (name, detail) {
+    try { if (window.gtag) gtag('event', name, detail ? { detail: String(detail).slice(0, 60) } : {}); } catch (e) {}
+  };
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest && e.target.closest('[data-tab]');
+    if (t) window.ssTrack('tab_viewed', t.getAttribute('data-tab'));
+  }, true);
+</script>
 <style>
 :root{
   --bg:#f7f5f0; --paper:#ffffff; --ink:#23211e; --muted:#6a655c; --line:#e3ddd1;
@@ -516,6 +526,27 @@ footer{max-width:var(--maxw);margin:0 auto;padding:0 16px 48px;font-size:14px;co
     document.querySelectorAll('main section').forEach(function(s){ obs.observe(s); });
   }
 })();
+</script>
+<script>
+(function () {
+  // Records how far people get: one event per section, the first time it scrolls into view.
+  if (!window.IntersectionObserver || !window.ssTrack) return;
+  var seen = {};
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      var id = en.target.id;
+      if (en.isIntersecting && id && !seen[id]) { seen[id] = 1; window.ssTrack('section_reached', id.replace(/^/, '')); }
+    });
+  }, { rootMargin: '0px 0px -50% 0px' });
+  document.querySelectorAll('section[id]').forEach(function (s) { io.observe(s); });
+})();
+</script>
+<script>
+document.addEventListener('click', function (e) {
+  // A checklist step ticked off (checked, not unchecked).
+  var li = e.target.closest && e.target.closest('[aria-checked]');
+  if (li && window.ssTrack) setTimeout(function () { if (li.getAttribute('aria-checked') === 'true') window.ssTrack('step_ticked', li.id || li.getAttribute('data-id') || ''); }, 0);
+}, true);
 </script>
 </body>
 </html>
